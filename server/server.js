@@ -7,7 +7,7 @@ const Registration = require('./models/Registration');
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:3000' }));
+app.use(cors({ origin: process.env.CLIENT_URL || 'https://2315022-kaira-technologies.vercel.app' }));
 app.use(express.json());
 
 app.get('/api/health', (req, res) => {
@@ -29,7 +29,7 @@ app.post('/api/registrations', async (req, res) => {
 async function startServer() {
   if (!process.env.MONGO_URI) throw new Error('MONGO_URI is missing. Add it to server/.env');
   await mongoose.connect(process.env.MONGO_URI, { serverSelectionTimeoutMS: 5000 });
-  app.listen(port, () => console.log(`Voice State API running on http://localhost:${port}`));
+  app.listen(port, () => console.log(`Voice State API running on https://two315022-kaira-technologies-1.onrender.com`));
 }
 
 startServer().catch((error) => {

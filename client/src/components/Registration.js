@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_URL = process.env.REACT_APP_API_URL || 'https://two315022-kaira-technologies-1.onrender.com';
 
 function Registration({ selectedCategory, setSelectedCategory, submitted, setSubmitted, categories }) {
   const [saving, setSaving] = useState(false);

@@ -11,6 +11,6 @@ npm install
 npm run dev
 ```
 
-The API runs on `http://localhost:5000` by default. The client submits registrations to `POST /api/registrations`.
+The API is deployed at `https://two315022-kaira-technologies-1.onrender.com`. The client submits registrations to `POST /api/registrations`.
 
 For a deployed client, set `REACT_APP_API_URL` before building the client, for example `https://api.example.com`.
