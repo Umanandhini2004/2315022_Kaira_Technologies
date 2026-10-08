@@ -6,8 +6,14 @@ const Registration = require('./models/Registration');
 
 const app = express();
 const port = process.env.PORT || 5000;
+const allowedOrigins = [
+  process.env.CLIENT_URL,
+  'https://2315022-kaira-technologies.vercel.app',
+].filter(Boolean);
 
-app.use(cors({ origin: process.env.CLIENT_URL || 'https://2315022-kaira-technologies.vercel.app' }));
+app.use(cors({
+  origin: allowedOrigins,
+}));
 app.use(express.json());
 
 app.get('/api/health', (req, res) => {
